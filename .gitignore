@@ -1,0 +1,99 @@
+# ============================================
+# Environment & Credentials (IMPORTANT!)
+# ============================================
+.env
+
+# ============================================
+# IDE & Editor Files
+# ============================================
+.vscode/
+.idea/
+.classpath
+.project
+.settings/
+*.swp
+*.swo
+*~
+*.iml
+*.iws
+*.ipr
+
+# ============================================
+# Build & Compilation (Maven)
+# ============================================
+/target/
+*.class
+*.jar
+*.war
+
+# ============================================
+# WebDriver & Test Infrastructure
+# ============================================
+/resources/Grid/
+*.exe
+chromedriver
+geckodriver
+msedgedriver
+
+# ============================================
+# Python Virtual Environment & Cache
+# ============================================
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+
+# ============================================
+# Logs & Reports
+# ============================================
+*.log
+/logs/
+/test-output/
+
+# ============================================
+# Temporary & Generated Files
+# ============================================
+~$*
+*.tmp
+*.bak
+*.backup
+.#*
+
+# ============================================
+# Project Specific
+# ============================================
+src/test/resources/config.properties
+
+# ============================================
+# Optional: generated / duplicate / manual-only (see team policy)
+# Not ignored: legacy/Jenkinsfile (optional), src/.../TriageReprocessor.java
+# ============================================
+/reports/
+/screenshots/
+
+# Duplicate Jenkins snapshots (same era as legacy Jenkinsfile)
+/docs/4/10jenkinsfile.md
+/docs/jenkins_pipeline_script_ok
+/docs/FORCE RELOAD v1.0.3 - Direct JSON.txt
+
+# Orphan / manual scripts (not used by CI)
+/test_payload.json
+/scripts/deploy_cf_pages.bat
+/scripts/root_cause_analysis.py
+/scripts/analyze_root_claude.py
+/tools/test_mcp.py
+
+# Docs — temporary notes (any depth under docs/)
+docs/**/tmp_*.md
+/docs/tmp_rovodev_fix_summary.md
+/docs/tmp_rovodev_analysis.md
+
+# ============================================
+# OS Files
+# ============================================
+.DS_Store
+Thumbs.db

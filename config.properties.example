@@ -1,0 +1,34 @@
+# Environment
+os=windows
+execution_env=local
+browser=chrome
+base_url=https://example.com/app
+grid_url=http://localhost:4444
+retry_count=1
+total_run_history=10
+
+# Explicit Wait Configuration
+explicit.timeout=10
+implicit.timeout=10
+
+# Author and Role Information
+author_name=Your Name
+author_role=Your Role
+
+# Database Connection
+db_host=localhost
+db_port=3306
+db_name=your_test_database
+db_user=root
+db_password=your_db_password
+# When true (default), creates test_run / test_run_result / run_artifact and mirrors JSONL + report paths (set false to keep only generated_test_data use)
+db_run_summary_enabled=true
+
+# Faker/Data Generation Rules (depending on the business rule)
+email_length=10
+phone_number_length=10
+password_length=8
+password_min_upper_case_count=1
+password_min_lower_case_count=1
+password_min_number_count=1
+password_special_character=@
