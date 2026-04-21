@@ -1,4 +1,4 @@
-# Hybrid Automation Framework
+# AI-Assisted Hybrid Automation Framework
 
 [English](README.md)
 
@@ -15,7 +15,7 @@
 </p>
 
 <p align="center">
-  <em>QA today is asked for the story behind a red build, not just the color. Hybrid Automation Framework is how I chose to answer that: failures and skips turned into JSON you can pass around with triage labels, optional MCP and LLM when a written RCA helps, and Slack and Jira on the same thread - so the focus stays on what to do next, not on reconstructing what happened from logs alone.</em>
+  <em>AI can help reduce manual effort in automation, but how? As a QA Engineer, I believe that to get truly accurate results from AI in our field, we must provide precisely filtered data at the right moment. That’s why I built this AI-Assisted Hybrid Automation Framework</em>
 </p>
 
 <p align="center">
@@ -44,15 +44,19 @@
 
 ## What is this
 
-Hybrid UI automation: Selenium, TestNG, Maven, and Excel-driven suites under Jenkins. Each run has a `run_id`; failures and skips become JSON bundles alongside Extent, logs, and screenshots. Triage (BUG / FLAKY / NEEDS_REVIEW / SKIP) uses history and per-run signals so Slack and Jira get the same story the bundles already tell. MCP and an LLM are optional - the same payloads can produce HTML under `reports/AI/` when you want a written RCA. When DB persistence is enabled in config, run-level and per-test summaries also go to MySQL - alongside the same data in files and `reports/history/`.
+- Generate structured evidence files ready for AI analysis
+- Examine triage patterns over time, not just single-run snapshots
+- Collaborate with an LLM assistant for root cause analysis
+- Send real-time notifications to Slack and Jira
+- Store test execution details in a dedicated database
 
 | Focus | In practice |
 | --- | --- |
-| Structured evidence | Failure and skip bundles, Extent, logs, screenshots - enough to act on without re-mining raw console output. |
-| History-aware triage | `reports/history/` and run signals drive labels before tickets; separates bugs, flakiness, and noise. |
-| One pipeline, shared context | `Jenkinsfile`: tests → MCP analysis → static report URLs when Cloudflare deploy is on → Slack / Jira with matching links. |
-| Optional DB persistence | MySQL (when enabled): run and per-test rows and artifact pointers - same intent as JSONL/files; use for SQL dashboards, not a separate triage pipeline. |
-| Specs and data in Git | User-story cases in [`docs/test-cases/`](docs/test-cases/); `testSuites/`, `testData/`, and pipeline config live with the branch Jenkins checks out. |
+| **Traceability & evidence** | Each run has a `run_id`; failures/skips are packaged as **shareable JSON bundles** with **logs** and **screenshots** so debugging does not rely on a single console line. |
+| **Triage beyond pass/fail** | Classification uses **historical trends** (e.g. BUG / FLAKY / NEEDS_REVIEW / SKIP), not only green vs red. |
+| **CI from source control** | **Jenkins Pipeline from SCM**: the `Jenkinsfile` in the repo drives builds for the checked-out revision. |
+| **AI-assisted RCA (optional)** | **LLM-driven root cause analysis** on failure bundles; optional **hosted artifacts** (e.g. HTML reports / static URLs) for stakeholders. |
+| **Alerts & issue tracking** | **Slack** for triage and run alerts; **Jira** for **BUG** tracking with aligned context and links. |
 
 ## Quick start
 
